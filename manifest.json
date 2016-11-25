@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+    "name": "Viral Vid Highlight",
+    "version": "0.1",
+    "content_scripts": [
+      {
+          "matches": [
+            "https://www.youtube.com/channel/*", 
+            "http://www.youtube.com/channel/*", 
+            "https://youtube.com/channel/*", 
+            "http://youtube.com/channel/*",
+            "https://www.youtube.com/user/*", 
+            "http://www.youtube.com/user/*", 
+            "https://youtube.com/user/*", 
+            "http://youtube.com/user/*"
+
+          ],
+          "js": ["jquery-3.1.1.slim.min.js", "content.js"]
+      }
+    ],
+    "browser_action": {
+        "default_icon": "icon.png"
+    },
+    "background": {
+        "scripts": ["background.js"]
+    }
+}
